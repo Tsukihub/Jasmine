@@ -50,9 +50,33 @@ var cesar = function(crypto, chaine) {
 §			la chaine de caractères utilisé pour codé est dans chaine	
 			var crypto = {str : '', cle : 0};	
 *////////////////////////////////////////////////////////////////
- var str;
- var cle;   
+
     //ici je met mon code ;)
+	/* for(var i=0;i < ca.length;i++) {
+    var c = ca[i];
+    while (c.charAt(0)==' ') c = c.substring(1,c.length);
+if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);*/
+/*alert(crypto["cle"]); [16, 34, 2]*/
+/*alert(crypto["str"]);["azertyuio (commence à 16 de chaine)", face, aznbvdrftyu (2 norm puis chaine à l'envers)] */
+/*alert(chaine) azertyuiopqsdfghjklmwxcbn*/
+/*for (var i=0; i<chaine.length; i++) {
+alert("Code ASCII de "+chaine.charAt(i)+"="+chaine.charCodeAt(i)+"");} pas fonction positions asciII*/
+/*azertyuiopqsdfghjklmwxcvbn 
+  12345678911111111112222222
+           01234567890123456
+  abcdefghijklmnopqrstuvwxyz
+
+                                  
+azertyuio +=chaine.charAt(i) où i=16; i>=25; i++
+jklmwxcvb
+ou chaine.split.crypto["str"]
+cookie.split(';');
+
+face +34 positions dans chaine  
+xotq
+
+chaine.charAt(i)où i=0; i>=1; i++ et chaine.charAt(i) où i=24; i<=2; i=i-1
+az  et  nbvdrftyu*/
 
     return reponse;
 }
