@@ -56,18 +56,27 @@ var cesar = function(crypto, chaine) {
     var c = ca[i];
     while (c.charAt(0)==' ') c = c.substring(1,c.length);
 if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);*/
+
 /*alert(crypto["cle"]); [16, 34, 2]*/
+
 /*alert(crypto["str"]);["azertyuio (commence à 16 de chaine)", face, aznbvdrftyu (2 norm puis chaine à l'envers)] */
+
 /*alert(chaine) azertyuiopqsdfghjklmwxcbn*/
+
 /*for (var i=0; i<chaine.length; i++) {
 alert("Code ASCII de "+chaine.charAt(i)+"="+chaine.charCodeAt(i)+"");} pas fonction positions asciII*/
 /*azertyuiopqsdfghjklmwxcvbn 
   12345678911111111112222222
            01234567890123456
   abcdefghijklmnopqrstuvwxyz*/
-reponse=new Array();
-reponse=chaine.split(crypto[str[1]]);
-reponse+=
+reponse='';
+for (i=0; i <= crypto.str.length-1; i++){//boucle de la longueur du mot
+  indexcrypte=chaine.indexOf(crypto.str[i])+crypto.cle;//prend caractère crypto.str[i] cherche son index dans chaine et le modifie en ajoutant la cle stocke dans index crypte
+  while (indexcrypte > chaine.length-1){//tant que si index crypte > lg index chaine rq ne marche pas avec if
+    indexcrypte= indexcrypte-chaine.length;//soustrait le nombre d'index
+  }
+  reponse+= chaine[indexcrypte];// met dans réponse le nouveau caractère
+}
 
                                  /* cle    chaine.length
 azertyuio +=chaine.charAt(i) où i=16; i>=25; i++
