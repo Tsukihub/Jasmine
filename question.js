@@ -8,8 +8,7 @@ L'algorithme doit lire la température en degrés Farenheit, et l'afficher en Fa
 
 
     //ici je met mon code ;)
-var temperature;
-var reponse;
+
 reponse=Math.round((temperature-32)*5/9);
     return reponse;
 
@@ -26,6 +25,7 @@ var age=parseInt(age);
 if (age>=18){reponse="majeur";}
 else{reponse="mineur";}
     return reponse;
+/*correction: age >= 18 ? reponse = "majeur" : reponse = "mineur";*/
 }
 var paye = function(vente) {
 /*///////////////////   CONSIGNE  //////////////////////////////// 
@@ -38,7 +38,7 @@ var paye = function(vente) {
     //ici je met mon code ;)
 
 
-reponse=vente["ventesRegulier"]*0.06+vente["ventesRabais"]*0.03+200;
+reponse=vente.ventesRegulier*0.06+vente.ventesRabais*0.03+200;
     return reponse;
 
 }
@@ -64,9 +64,12 @@ alert("Code ASCII de "+chaine.charAt(i)+"="+chaine.charCodeAt(i)+"");} pas fonct
 /*azertyuiopqsdfghjklmwxcvbn 
   12345678911111111112222222
            01234567890123456
-  abcdefghijklmnopqrstuvwxyz
+  abcdefghijklmnopqrstuvwxyz*/
+reponse=new Array();
+reponse=chaine.split(crypto[str[1]]);
+reponse+=
 
-                                  
+                                 /* cle    chaine.length
 azertyuio +=chaine.charAt(i) où i=16; i>=25; i++
 jklmwxcvb
 ou chaine.split.crypto["str"]
